@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">zad2</string>
+    <string name="b_belkowe">Bąbelkowe</string>
+    <string name="przez_wyb_r">Przez wybór</string>
+    <string name="before">Before sort</string>
+    <string name="after">After sort</string>
+    <string name="input">Podaj liczby po spacji</string>
+    <string name="before2">Tutaj pojawią się liczby przed sortowaniem</string>
+    <string name="after2">Tutaj pojawią się liczyb po sortowaniu</string>
+    <string name="infoB">Algorytm sortowania bąbelkowego jest jednym z najstarszych algorytmów sortujących.
+        działania opiera się na cyklicznym porównywaniu par sąsiadujących elementów i zamianie ich kolejności
+        w przypadku niespełnienia kryterium porządkowego zbioru.</string>
+    <string name="infoW">Strategia sortowania przez wybór jest bardzo prosta.
+        Szukamy najmniejszego elementu w zbiorze i zamieniamy go z elementem stojącym na pozycji pierwszej.
+        Następnie szukamy znowu elementu najmniejszego w zbiorze pominiętym o pierwszy element i wstawiamy go na pozycję drugą.
+        Czynności powtarzamy do momentu otrzymania jednoelementowego podzbioru. </string>
+    <string name="error">Wprowadz liczby!</string>
+    <string name="error2">Możesz posortować tylko liczby!</string>
+    <string name="back">Powrót</string>
+</resources>

@@ -9,17 +9,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.zad2.databinding.AfterBinding
+import java.lang.Exception
 
 class Back : AppCompatActivity() {
+
+    lateinit var binding: AfterBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.after)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        binding = AfterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         val extras = intent.extras ?: return
         val sortType = extras.getBoolean("Type")
         val input = extras.getString("String")
@@ -35,9 +34,9 @@ class Back : AppCompatActivity() {
     private fun sortB(input: String) {
 //        val extras = intent.extras ?: return
         //val input = extras.getString("String")
-        val before: TextView = findViewById(R.id.before)
-        val after: TextView = findViewById(R.id.after)
-        val info: TextView = findViewById(R.id.info)
+        val before: TextView = binding.before
+        val after: TextView = binding.after
+        val info: TextView = binding.info
         Log.i("i", input)
         val numbers2 = input.split(" ")
         Log.i("i", numbers2.size.toString())
@@ -71,9 +70,9 @@ class Back : AppCompatActivity() {
     private fun wyb(input: String) {
 //        val extras = intent.extras ?: return
         //val input = extras.getString("String")
-        val before: TextView = findViewById(R.id.before)
-        val after: TextView = findViewById(R.id.after)
-        val info: TextView = findViewById(R.id.info)
+        val before: TextView = binding.before
+        val after: TextView = binding.after
+        val info: TextView = binding.info
         Log.i("i", input)
         val numbers2 = input.split(" ")
         Log.i("i", numbers2.size.toString())
@@ -106,7 +105,11 @@ class Back : AppCompatActivity() {
     }
 
     fun backToMain() {
-        val MainActivity = Intent(this, Front::class.java)
-        startActivity(MainActivity)
+        try {
+            val MainActivity = Intent(this, Front::class.java)
+            startActivity(MainActivity)
+        }catch (e: Exception){
+            Log.i("i", "coś nie tak")
+        }
     }
 }

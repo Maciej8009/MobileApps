@@ -9,21 +9,20 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.zad2.databinding.BeforeBinding
 
 class Front : AppCompatActivity() {
+
+    lateinit var binding: BeforeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.before)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        binding = BeforeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
     }
 
     fun sortB(view: View) {
-        val input: EditText = findViewById(R.id.input)
+        val input: EditText = binding.input
         if (input.text.toString().isNotEmpty()) {
             val secondActivity = Intent(this, Back::class.java);
             secondActivity.putExtra("String", input.text.toString())
@@ -33,7 +32,7 @@ class Front : AppCompatActivity() {
         }
     }
     fun wyb(view: View) {
-        val input: EditText = findViewById(R.id.input)
+        val input: EditText = binding.input
         if (input.text.toString().isNotEmpty()) {
             val secondActivity = Intent(this, Back::class.java);
             secondActivity.putExtra("String", input.text.toString())

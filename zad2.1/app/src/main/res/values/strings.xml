@@ -1,10 +1,12 @@
 <resources>
-    <string name="app_name">zad2.1</string>
+    <string name="app_name">Sortowanie 2 aktywności Maciej Kowalik 215IC</string>
     <string name="b_belkowe">Bąbelkowe</string>
     <string name="przez_wyb_r">Przez wybór</string>
     <string name="before">Before sort</string>
     <string name="after">After sort</string>
-    <string name="input">Podaj liczby po spacji</string>
+    <string name="input">Podaj liczby po spacji
+    Uwaga!
+    Nie zostawiaj spacji na końcu!</string>
     <string name="before2">Tutaj pojawią się liczby przed sortowaniem</string>
     <string name="after2">Tutaj pojawią się liczyb po sortowaniu</string>
     <string name="infoB">Algorytm sortowania bąbelkowego jest jednym z najstarszych algorytmów sortujących.

@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "zad2"
+rootProject.name = "zad2.1"
 include(":app")
  

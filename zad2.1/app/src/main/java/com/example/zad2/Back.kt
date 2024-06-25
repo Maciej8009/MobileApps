@@ -16,13 +16,13 @@ class Back : AppCompatActivity() {
 
     lateinit var binding: AfterBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        val info: TextView = binding.info
         super.onCreate(savedInstanceState)
         binding = AfterBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val extras = intent.extras ?: return
         val sortType = extras.getBoolean("Type")
         val input = extras.getString("String")
+        val info: TextView = binding.info
         if (input.isNullOrEmpty()) {
             info.text = getString(R.string.error)
             return
@@ -32,6 +32,14 @@ class Back : AppCompatActivity() {
         }
         else
             wyb(input)
+    }
+    fun backToMain() {
+        try {
+            val MainActivity = Intent(this, Front::class.java)
+            startActivity(MainActivity)
+        }catch (e: Exception){
+            Log.i("i", "coś nie tak")
+        }
     }
     @SuppressLint("CutPasteId")
     private fun sortB(input: String) {
@@ -107,12 +115,5 @@ class Back : AppCompatActivity() {
 
     }
 
-    fun backToMain() {
-        try {
-            val MainActivity = Intent(this, Front::class.java)
-            startActivity(MainActivity)
-        }catch (e: Exception){
-            Log.i("i", "coś nie tak")
-        }
-    }
+
 }

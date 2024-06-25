@@ -16,14 +16,17 @@ class Back : AppCompatActivity() {
 
     lateinit var binding: AfterBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        val info: TextView = binding.info
         super.onCreate(savedInstanceState)
         binding = AfterBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val extras = intent.extras ?: return
         val sortType = extras.getBoolean("Type")
         val input = extras.getString("String")
-        if (input.isNullOrEmpty())
+        if (input.isNullOrEmpty()) {
+            info.text = getString(R.string.error)
             return
+        }
         if (sortType) {
             sortB(input)
         }

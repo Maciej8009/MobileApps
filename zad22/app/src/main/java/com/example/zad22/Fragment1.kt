@@ -33,7 +33,7 @@ class Fragment1 : Fragment() {
     }
 
 
-    override fun onCreateView(
+    fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {

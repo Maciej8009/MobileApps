@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Zad2.2 Kowalik Maciej</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bubble">Bubble sort</string>
+    <string name="select">Select sort</string>
+    <string name="info">Wpisz liczby oddzielone spacją,
+    nie zostawiaj spacji na końcu!</string>
+    <string name="afterText">Po sortowaniu:</string>
+    <string name="beforeText">Przed sortowaniem:</string>
+    <string name="bubbleSortInfo">Algorytm sortowania bąbelkowego jest jednym z najstarszych algorytmów sortujących.
+        działania opiera się na cyklicznym porównywaniu par sąsiadujących elementów i zamianie ich kolejności
+        w przypadku niespełnienia kryterium porządkowego zbioru.</string>
+    <string name="SelectSortInfo">Strategia sortowania przez wybór jest bardzo prosta.
+        Szukamy najmniejszego elementu w zbiorze i zamieniamy go z elementem stojącym na pozycji pierwszej.
+        Następnie szukamy znowu elementu najmniejszego w zbiorze pominiętym o pierwszy element i wstawiamy go na pozycję drugą.
+        Czynności powtarzamy do momentu otrzymania jednoelementowego podzbioru.</string>
+    <string name="error">Wprowadz liczby!</string>
+    <string name="error2">Możesz posortować tylko liczby!</string>
+</resources>
